@@ -15,20 +15,20 @@ export function About() {
           />
 
           <div className="space-y-5">
-            <MotionItem className="rounded-[28px] bg-white p-7 shadow-sm ring-1 ring-brand-sky/20">
+            <MotionItem className="rounded-[28px] bg-gradient-to-br from-white/90 to-brand-sky/18 p-7 shadow-sm ring-1 ring-brand-rose/20 backdrop-blur">
               <p className="text-base leading-8 text-slate-600">
                 El centro ha recibido pacientes que no lograron éxito en otros espacios y, con su enfoque integral, el cambio ha sido real y tangible. Su trabajo combina tecnología de vanguardia con técnicas milenarias y complementarias como la craneopuntura.
               </p>
             </MotionItem>
             <div className="grid gap-5 md:grid-cols-2">
-              <MotionItem className="rounded-[28px] bg-gradient-to-br from-brand-deep via-brand-deep to-brand-blue p-7 text-white shadow-soft">
+              <MotionItem className="rounded-[28px] bg-gradient-to-br from-brand-deep via-brand-deep to-brand-blue p-7 text-white shadow-soft ring-1 ring-brand-rose/20">
                 <Target aria-hidden="true" className="h-8 w-8 text-brand-sky" />
                 <h3 className="mt-5 text-2xl font-black">Misión</h3>
                 <p className="mt-3 text-sm leading-7 text-white/76">
                   Brindar atención integral en salud con un enfoque personalizado, tecnología avanzada y calidez humana, logrando resultados reales en cada paciente desde la primera sesión.
                 </p>
               </MotionItem>
-              <MotionItem className="rounded-[28px] bg-white p-7 shadow-sm ring-1 ring-brand-lilac/20">
+              <MotionItem className="rounded-[28px] bg-gradient-to-br from-white/90 via-brand-mist to-brand-rose/14 p-7 shadow-sm ring-1 ring-brand-rose/20 backdrop-blur">
                 <Telescope aria-hidden="true" className="h-8 w-8 text-brand-blue" />
                 <h3 className="mt-5 text-2xl font-black text-brand-ink">Visión</h3>
                 <p className="mt-3 text-sm leading-7 text-slate-600">
@@ -39,17 +39,17 @@ export function About() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-[32px] bg-white p-6 shadow-sm ring-1 ring-brand-lilac/20 sm:p-8">
+        <div className="mt-12 rounded-[32px] bg-gradient-to-br from-white/90 via-brand-mist to-brand-rose/12 p-6 shadow-sm ring-1 ring-brand-rose/20 backdrop-blur sm:p-8">
           <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.18em] text-brand-blue">Valores</p>
               <h3 className="mt-2 text-2xl font-black text-brand-ink">La forma de atender también es parte del tratamiento</h3>
             </div>
-            <Award aria-hidden="true" className="hidden h-12 w-12 text-brand-lilac md:block" />
+            <Award aria-hidden="true" className="hidden h-12 w-12 text-brand-rose md:block" />
           </div>
           <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {values.map((value) => (
-              <div key={value} className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-brand-mist to-brand-sky/20 px-4 py-4 text-sm font-black text-brand-deep">
+              <div key={value} className="flex items-center gap-3 rounded-2xl bg-gradient-to-br from-brand-mist to-brand-rose/12 px-4 py-4 text-sm font-black text-brand-deep">
                 <HeartHandshake aria-hidden="true" className="h-5 w-5 shrink-0 text-brand-blue" />
                 {value}
               </div>

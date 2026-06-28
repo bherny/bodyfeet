@@ -54,11 +54,6 @@ export function ContactForm() {
       "",
       `Mensaje: ${values.message}`,
     ].join("\n");
-    const whatsappWindow = window.open("about:blank", "_blank");
-    if (whatsappWindow) {
-      whatsappWindow.opener = null;
-      whatsappWindow.document.write("<p>Preparando WhatsApp...</p>");
-    }
 
     const response = await fetch("/api/contact", {
       method: "POST",
@@ -67,7 +62,6 @@ export function ContactForm() {
     });
 
     if (!response.ok) {
-      whatsappWindow?.close();
       setStatus("error");
       return;
     }
@@ -76,11 +70,7 @@ export function ContactForm() {
     setStatus("success");
 
     const whatsappUrl = whatsappHref(siteConfig.whatsapp, whatsappMessage);
-    if (whatsappWindow) {
-      whatsappWindow.location.href = whatsappUrl;
-    } else {
-      window.location.href = whatsappUrl;
-    }
+    window.location.assign(whatsappUrl);
   }
 
   return (
@@ -132,13 +122,13 @@ export function ContactForm() {
         className="focus-ring inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-brand-deep px-6 py-3 text-sm font-black text-white shadow-lift transition hover:-translate-y-0.5 hover:bg-brand-ink disabled:cursor-not-allowed disabled:opacity-70"
       >
         {isSubmitting ? <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Send aria-hidden="true" className="h-4 w-4" />}
-        Enviar solicitud
+        Enviar por WhatsApp
       </button>
 
       {status === "success" ? (
         <p className="flex gap-2 rounded-2xl bg-emerald-50 px-4 py-3 text-sm font-bold text-emerald-800" role="status">
           <CheckCircle2 aria-hidden="true" className="h-5 w-5 shrink-0" />
-          Solicitud validada. Se abrirá WhatsApp con los datos de la reserva.
+          Solicitud validada. WhatsApp se abrirá con los datos listos para enviar.
         </p>
       ) : null}
       {status === "error" ? (

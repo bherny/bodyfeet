@@ -1,4 +1,4 @@
-import { MailWarning, MessageCircle, Phone } from "lucide-react";
+import { CalendarCheck, MessageCircle, Phone, Send } from "lucide-react";
 import { ButtonLink } from "@/components/button-link";
 import { ContactForm } from "@/components/contact-form";
 import { MotionItem, MotionSection } from "@/components/motion-section";
@@ -8,13 +8,13 @@ import { phoneHref, whatsappHref } from "@/lib/utils";
 
 export function Contact() {
   return (
-    <MotionSection id="contacto" className="bg-white py-20 sm:py-24">
+    <MotionSection id="contacto" className="blue-section py-20 sm:py-24">
       <div className="container-page grid gap-12 lg:grid-cols-[0.82fr_1fr] lg:items-start">
         <div>
           <SectionHeading
             eyebrow="Contacto"
             title="Reserva una cita o solicita información"
-            description="El formulario queda preparado para integrarse con un backend, servicio de correo o CRM. Los datos sensibles deben configurarse con variables de entorno."
+            description="El formulario está preparado para enviar la solicitud por WhatsApp con los datos de la reserva."
           />
           <div className="mt-8 space-y-4">
             <ButtonLink
@@ -30,29 +30,43 @@ export function Contact() {
             </ButtonLink>
           </div>
 
-          <div className="mt-8 rounded-[28px] border border-brand-blue/14 bg-gradient-to-br from-brand-mist to-brand-lilac/15 p-6">
+          <div className="soft-shine mt-8 rounded-[28px] border border-brand-rose/35 bg-gradient-to-br from-white/90 via-brand-sky/24 to-brand-rose/16 p-6 shadow-sm backdrop-blur">
             <div className="flex gap-3">
-              <MailWarning aria-hidden="true" className="mt-1 h-5 w-5 shrink-0 text-brand-blue" />
+              <span className="mt-1 flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-sky/35 text-brand-blue ring-1 ring-brand-rose/30">
+                <Send aria-hidden="true" className="h-5 w-5" />
+              </span>
               <div>
-                <h3 className="font-black text-brand-ink">Dato pendiente</h3>
+                <h3 className="font-black text-brand-ink">Reserva por WhatsApp</h3>
                 <p className="mt-2 text-sm leading-7 text-slate-600">
-                  El documento no incluye correo electrónico ni enlaces exactos de Google Maps. Estos campos deben reemplazarse cuando el cliente los entregue.
+                  Al enviar el formulario se abre WhatsApp con tus datos listos para coordinar la cita con BODY FEET.
                 </p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/78 px-3 py-1.5 text-xs font-black text-brand-deep ring-1 ring-brand-sky/30">
+                    <CalendarCheck aria-hidden="true" className="h-3.5 w-3.5 text-brand-blue" />
+                    Reserva rápida
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/78 px-3 py-1.5 text-xs font-black text-brand-deep ring-1 ring-brand-rose/30">
+                    <MessageCircle aria-hidden="true" className="h-3.5 w-3.5 text-brand-rose" />
+                    Contacto directo
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="mt-8 space-y-4">
             {locations.map((location) => (
-              <div key={location.name} className="rounded-2xl border border-brand-blue/12 bg-gradient-to-br from-white to-brand-sky/12 p-4 shadow-sm">
+              <div key={location.name} className="rounded-2xl border border-brand-rose/24 bg-white/78 p-4 shadow-sm backdrop-blur">
                 <p className="text-sm font-black text-brand-ink">{location.name}</p>
-                <p className="mt-1 text-sm text-slate-600">{location.phone} · {location.hours}</p>
+                <p className="mt-1 text-sm text-slate-600">
+                  {location.phone} · {location.hours}
+                </p>
               </div>
             ))}
           </div>
         </div>
 
-        <MotionItem className="rounded-[32px] border border-brand-blue/14 bg-gradient-to-br from-brand-mist via-white to-brand-sky/20 p-5 shadow-soft sm:p-8">
+        <MotionItem className="rounded-[32px] border border-brand-rose/35 bg-gradient-to-br from-white/92 via-brand-mist to-brand-sky/28 p-5 shadow-soft backdrop-blur sm:p-8">
           <ContactForm />
         </MotionItem>
       </div>

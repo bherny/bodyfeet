@@ -12,6 +12,7 @@ const config: Config = {
         brand: {
           sky: "#99D6E9",
           blue: "#5E92DB",
+          rose: "#F4B8CC",
           lilac: "#CAA2DE",
           deep: "#315470",
           ink: "#17324A",

@@ -9,10 +9,10 @@ export function Services() {
   const tones = [
     "from-brand-sky/75 to-brand-blue/35",
     "from-brand-blue/55 to-brand-sky/45",
-    "from-brand-lilac/55 to-brand-sky/45",
+    "from-brand-rose/50 to-brand-sky/45",
     "from-brand-deep/45 to-brand-sky/45",
-    "from-brand-sky/65 to-brand-lilac/45",
-    "from-brand-lilac/55 to-brand-blue/35",
+    "from-brand-sky/65 to-brand-rose/35",
+    "from-brand-rose/45 to-brand-blue/35",
   ];
 
   return (
@@ -26,7 +26,7 @@ export function Services() {
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => (
-            <MotionItem key={service.title} className="group overflow-hidden rounded-[28px] border border-brand-blue/18 bg-white shadow-sm ring-1 ring-white/70 transition hover:-translate-y-1 hover:border-brand-sky/55 hover:shadow-lift">
+            <MotionItem key={service.title} className="group overflow-hidden rounded-[28px] border border-brand-sky/40 bg-white/92 shadow-sm ring-1 ring-brand-rose/10 backdrop-blur transition hover:-translate-y-1 hover:border-brand-rose/45 hover:shadow-lift">
               <div className={`h-1.5 bg-gradient-to-r ${tones[index % tones.length]}`} />
               <div className="grid min-h-full md:grid-cols-[0.85fr_1fr]">
                 <div className="relative min-h-72 overflow-hidden">
@@ -45,9 +45,9 @@ export function Services() {
                     </span>
                   </div>
                 </div>
-                <div className="relative overflow-hidden p-6 sm:p-7">
-                  <div className="absolute right-0 top-0 h-28 w-28 translate-x-8 -translate-y-8 rounded-full bg-brand-lilac/20" />
-                  <div className="absolute bottom-0 right-8 h-20 w-20 translate-y-10 rounded-full bg-brand-sky/20" />
+                <div className="relative overflow-hidden bg-gradient-to-br from-white via-brand-mist to-brand-sky/18 p-6 sm:p-7">
+                  <div className="absolute right-0 top-0 h-28 w-28 translate-x-8 -translate-y-8 rounded-full bg-brand-rose/22" />
+                  <div className="absolute bottom-0 right-8 h-20 w-20 translate-y-10 rounded-full bg-brand-blue/18" />
                   <div className={`flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${tones[index % tones.length]} text-brand-deep shadow-sm`}>
                     <service.icon aria-hidden="true" className="h-6 w-6" />
                   </div>

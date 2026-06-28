@@ -7,7 +7,7 @@ import { phoneHref } from "@/lib/utils";
 
 export function Locations() {
   return (
-    <MotionSection id="sedes" className="bg-white py-20 sm:py-24">
+    <MotionSection id="sedes" className="bg-gradient-to-b from-[#eaf8fc] via-white to-[#e8f7fc] py-20 sm:py-24">
       <div className="container-page">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
@@ -21,18 +21,18 @@ export function Locations() {
           {locations.map((location, index) => (
             <MotionItem
               key={location.name}
-              className="group relative overflow-hidden rounded-[30px] border border-brand-blue/16 bg-gradient-to-br from-white via-brand-mist to-brand-sky/30 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lift"
+              className="group relative overflow-hidden rounded-[30px] border border-brand-sky/40 bg-gradient-to-br from-white/90 via-brand-mist to-brand-sky/34 p-6 shadow-sm backdrop-blur transition hover:-translate-y-1 hover:border-brand-rose/45 hover:shadow-lift"
             >
-              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-brand-lilac/20 transition group-hover:scale-110" />
+              <div className="absolute -right-16 -top-16 h-44 w-44 rounded-full bg-brand-rose/18 transition group-hover:scale-110" />
               <div className="absolute -bottom-20 -left-16 h-48 w-48 rounded-full bg-brand-sky/45" />
               <div className="absolute inset-x-6 top-28 h-px bg-gradient-to-r from-transparent via-brand-blue/25 to-transparent" />
 
               <div className="relative z-10">
                 <div className="flex items-start justify-between gap-4">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-brand-sky/65 to-brand-lilac/35 text-brand-deep shadow-sm">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-brand-sky/65 to-brand-rose/28 text-brand-deep shadow-sm">
                     <Building2 aria-hidden="true" className="h-8 w-8" />
                   </div>
-                  <span className="rounded-full bg-white/82 px-3 py-1.5 text-xs font-black text-brand-deep shadow-sm">
+                  <span className="rounded-full border border-brand-blue/10 bg-white/82 px-3 py-1.5 text-xs font-black text-brand-deep shadow-sm">
                     {location.isMain ? "Sede principal" : `Sede ${index + 1}`}
                   </span>
                 </div>
@@ -62,7 +62,7 @@ export function Locations() {
           ))}
         </div>
 
-        <MotionItem className="mt-10 overflow-hidden rounded-[30px] border border-brand-blue/14 bg-gradient-to-r from-brand-mist via-white to-brand-sky/20 shadow-soft">
+        <MotionItem className="mt-10 overflow-hidden rounded-[30px] border border-brand-rose/35 bg-gradient-to-r from-brand-sky/24 via-white to-brand-rose/14 shadow-soft">
           <details className="group">
             <summary className="focus-ring flex cursor-pointer list-none flex-col gap-4 p-5 marker:hidden sm:flex-row sm:items-center sm:justify-between sm:p-6">
               <span>

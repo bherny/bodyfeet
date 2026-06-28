@@ -11,7 +11,7 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 lg:grid-cols-[1.2fr_0.8fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white">
+            <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-white ring-1 ring-brand-rose/35">
               <Image src="/brand/body-feet-mark.png" alt="" fill sizes="48px" className="object-contain p-2" />
             </span>
             <div>
@@ -31,7 +31,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-sm font-black uppercase tracking-[0.18em] text-brand-sky">Navegación</h2>
+          <h2 className="text-sm font-black uppercase tracking-[0.18em] text-brand-rose">Navegación</h2>
           <ul className="mt-5 space-y-3">
             {navItems.map((item) => (
               <li key={item.href}>
@@ -44,7 +44,7 @@ export function Footer() {
         </div>
 
         <div>
-          <h2 className="text-sm font-black uppercase tracking-[0.18em] text-brand-sky">Sedes</h2>
+          <h2 className="text-sm font-black uppercase tracking-[0.18em] text-brand-rose">Sedes</h2>
           <ul className="mt-5 space-y-4">
             {locations.map((location) => (
               <li key={location.name} className="flex gap-3 text-sm text-white/74">
@@ -66,10 +66,10 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-white/10 py-5">
+      <div className="border-t border-brand-rose/15 py-5">
         <div className="container-page flex flex-col gap-2 text-xs text-white/56 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {siteConfig.name}. Todos los derechos reservados.</p>
-          
+          <p>Correo electrónico y enlaces exactos de Google Maps pendientes de entrega.</p>
         </div>
       </div>
     </footer>

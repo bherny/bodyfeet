@@ -19,5 +19,5 @@ export function phoneHref(phone: string) {
 
 export function whatsappHref(phone: string, message: string) {
   const clean = phone.replace(/\D/g, "");
-  return `https://wa.me/${clean}?text=${encodeURIComponent(message)}`;
+  return `https://api.whatsapp.com/send?phone=${clean}&text=${encodeURIComponent(message)}`;
 }

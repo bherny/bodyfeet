@@ -19,7 +19,7 @@ export function MotionSection({ id, className, children }: MotionSectionProps) {
       initial={reduceMotion ? false : { opacity: 1, y: 22 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.18 }}
-      transition={{ duration: 0.55, ease: "easeOut" }}
+      transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
     >
       {children}
     </motion.section>
@@ -32,10 +32,10 @@ export function MotionItem({ className, children }: { className?: string; childr
   return (
     <motion.div
       className={cn(className)}
-      initial={reduceMotion ? false : { opacity: 1, y: 16 }}
+      initial={reduceMotion ? false : { opacity: 1, y: 16, scale: 0.98 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.22 }}
-      transition={{ duration: 0.45, ease: "easeOut" }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], scale: { duration: 0.45 } }}
     >
       {children}
     </motion.div>
