@@ -13,7 +13,7 @@ export function Locations() {
           <SectionHeading
             eyebrow="Sedes"
             title="Tres puntos de atención para pacientes de La Molina y Manchay"
-            description="Mostramos las tres sedes en una sola vista, sin fotografías, con datos claros para llamar y elegir el local más conveniente."
+            description="Elige la sede más conveniente y comunícate directamente para coordinar tu atención."
           />
         </div>
 

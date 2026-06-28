@@ -24,7 +24,6 @@ export const siteConfig = {
   phone: "951582511",
   facebook: "https://www.facebook.com/share/18jB3K2A6w/",
   tiktok: "https://www.tiktok.com/@bodyfeetcentro",
-  pendingEmail: "Correo electrónico pendiente de entrega por el cliente",
   googleMapsEmbed:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3187.2439793970934!2d-76.89058481759064!3d-12.087676934796109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c10b5f8f43cd%3A0x1a12a3ba88d9eb96!2sCentro%20De%20Podolog%C3%ADa%20Y%20Rehabilitaci%C3%B3n%22%20Body%20Feet%22!5e0!3m2!1ses-419!2spe!4v1782580549303!5m2!1ses-419!2spe",
   googleMapsUrl:
@@ -127,7 +126,6 @@ export const locations = [
     phone: "979084842",
     hours: "9:00 a.m. a 7:00 p.m.",
     isMain: false,
-    mapsStatus: "Mapa referencial disponible en esta página",
   },
   {
     name: "Sede principal Musa",
@@ -135,7 +133,6 @@ export const locations = [
     phone: "951582511",
     hours: "9:00 a.m. a 8:30 p.m.",
     isMain: true,
-    mapsStatus: "Mapa oficial disponible en esta página",
   },
   {
     name: "Sede Manchay",
@@ -143,7 +140,6 @@ export const locations = [
     phone: "941501357",
     hours: "9:00 a.m. a 7:00 p.m.",
     isMain: false,
-    mapsStatus: "Mapa referencial disponible en esta página",
   },
 ];
 
@@ -155,14 +151,6 @@ export const values = [
   "Ética profesional",
 ];
 
-export const goals = [
-  "Conseguir más pacientes",
-  "Aumentar ventas de productos",
-  "Mostrar las tres sedes",
-  "Mejorar imagen profesional",
-  "Facilitar reservas",
-  "Captar nuevos clientes",
-];
 
 export const stats = [
   { value: "+10", label: "años en el mercado" },

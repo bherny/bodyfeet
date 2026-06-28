@@ -58,7 +58,7 @@ export async function POST(request: NextRequest) {
     service: sanitizeText(parsed.data.service, 120),
     location: sanitizeText(parsed.data.location, 80),
     message: sanitizeText(parsed.data.message, 800),
-    contactTo: process.env.CONTACT_TO_EMAIL ?? "pendiente-configurar@bodyfeet.example",
+    contactTo: process.env.CONTACT_TO_EMAIL ?? "contact@bodyfeet.example",
   };
 
   console.info("BODY FEET contact request ready for integration", payload);

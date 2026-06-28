@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { MotionItem, MotionSection } from "@/components/motion-section";
-import { PlaceholderNote } from "@/components/placeholder-note";
 import { SectionHeading } from "@/components/section-heading";
 import { services } from "@/lib/site-data";
 
@@ -21,25 +20,27 @@ export function Services() {
         <SectionHeading
           eyebrow="Servicios"
           title="Especialidades para una recuperación integral"
-          description="Todas las sedes ofrecen los mismos servicios, según la información entregada por el cliente."
+          description="Tratamientos integrales para el cuidado del pie, la recuperación física y el bienestar del paciente."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {services.map((service, index) => (
-            <MotionItem key={service.title} className="group overflow-hidden rounded-[28px] border border-brand-sky/40 bg-white/92 shadow-sm ring-1 ring-brand-rose/10 backdrop-blur transition hover:-translate-y-1 hover:border-brand-rose/45 hover:shadow-lift">
+            <MotionItem
+              key={service.title}
+              className="group overflow-hidden rounded-[28px] border border-brand-sky/40 bg-white/92 shadow-sm ring-1 ring-brand-rose/10 backdrop-blur transition hover:-translate-y-1 hover:border-brand-rose/45 hover:shadow-lift"
+            >
               <div className={`h-1.5 bg-gradient-to-r ${tones[index % tones.length]}`} />
               <div className="grid min-h-full md:grid-cols-[0.85fr_1fr]">
                 <div className="relative min-h-72 overflow-hidden">
                   <Image
                     src={service.image}
-                    alt={`Imagen referencial del servicio ${service.title}`}
+                    alt={`Servicio de ${service.title}`}
                     fill
                     sizes="(min-width: 1024px) 28vw, 92vw"
                     className="object-cover transition duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/48 via-brand-deep/8 to-transparent opacity-80" />
-                  <div className="absolute left-4 top-4 flex items-center gap-2">
-                    <PlaceholderNote compact />
+                  <div className="absolute left-4 top-4">
                     <span className="rounded-full bg-brand-deep/82 px-3 py-1.5 text-xs font-black text-white shadow-sm backdrop-blur">
                       Servicio {String(index + 1).padStart(2, "0")}
                     </span>

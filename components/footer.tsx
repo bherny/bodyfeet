@@ -67,9 +67,8 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t border-brand-rose/15 py-5">
-        <div className="container-page flex flex-col gap-2 text-xs text-white/56 sm:flex-row sm:items-center sm:justify-between">
+        <div className="container-page text-xs text-white/56">
           <p>© {new Date().getFullYear()} {siteConfig.name}. Todos los derechos reservados.</p>
-          <p>Correo electrónico y enlaces exactos de Google Maps pendientes de entrega.</p>
         </div>
       </div>
     </footer>
