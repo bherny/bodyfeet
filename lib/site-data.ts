@@ -82,7 +82,7 @@ export const services = [
     icon: Activity,
   },
   {
-    title: "Quiropráctica",
+    title: "Quiropraxia",
     description:
       "Ajustes vertebrales y articulares para restaurar la movilidad, aliviar dolores musculoesqueléticos y mejorar el funcionamiento del sistema nervioso.",
     benefits: ["Alivio inmediato del dolor", "Mejora de la movilidad", "Sin medicamentos"],
